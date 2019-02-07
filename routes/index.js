@@ -4,6 +4,6 @@ const user = require('./users')
 
 /* GET home page. */
 
-router.get('/', user)
+router.use('/users', user)
 
 module.exports = router;
