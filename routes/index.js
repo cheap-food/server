@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const user = require('./users')
+const userRoute = require('./users')
 
 /* GET home page. */
 
-router.use('/users', user)
+router.use('/user', userRoute)
 
 module.exports = router;
