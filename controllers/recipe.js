@@ -3,9 +3,12 @@ const axios = require('axios')
 module.exports = {
   search: function(req, res) {
     // search nama menu recipe
-    req.params.id = req.params.page || 1
-    // jika error hapus "req.params.page" pada query get 
-    axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_KEY}&q=${req.body.search}&page=${req.params.page}`)
+    // console.log(process.env.FOOD2FORK_KEY)
+    req.params.page = req.params.page || 1
+    // console.log(req.body.search)
+    req.body.search = req.body.search || ''
+    // jika error hapus "req.params.page" pada query get
+    axios.get(`https://www.food2fork.com/api/search?key=${process.env.FOOD2FORK_KEY}&q=${req.body.search}`)
       .then( function(response) {
         res
           .status(200)
