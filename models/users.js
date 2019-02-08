@@ -17,7 +17,7 @@ const UserSchema = new Schema({
     },{
       isAsync : true,
       validator : (value, callback) => {
-        Member
+        User
           .findOne({
             email: value
           })
