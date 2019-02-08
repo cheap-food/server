@@ -16,20 +16,6 @@ class TranslationController {
                     .json(translation)
             }
         });
-        // googleTranslate.translate(req.body.words, 'id', function(err, translation) {
-        //     if (err) {
-        //         res
-        //             .status(500)
-        //             .json({
-        //                 msg: `Internal Server Error`,
-        //                 err: err
-        //             })
-        //     } else {
-        //         res
-        //             .status(200)
-        //             .json(translation)
-        //     }
-        // });
     }
 
     static getAllLangs(req, res) {
